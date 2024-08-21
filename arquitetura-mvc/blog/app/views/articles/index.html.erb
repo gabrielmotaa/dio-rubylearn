@@ -1,0 +1,13 @@
+<h1>Artigos</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <a href="<%= article_path(article) %>">
+      <%= article.title %> - <%= article.author %> (<%= article.rating %>/5)
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Novo Artigo", new_article_path %>
